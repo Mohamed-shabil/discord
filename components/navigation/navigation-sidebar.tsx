@@ -13,7 +13,7 @@ export const NavigationSidebar = async () => {
   if (!profile) {
     return redirect("/");
   }
-  const servers = await db.server.findMany({
+  const servers = await db.server.findMany({ 
     where: {
       members: {
         some: {
@@ -23,7 +23,7 @@ export const NavigationSidebar = async () => {
     },
   });
   return (
-    <div className="space-y-4 flex flex-col items-center h-full text-primary w-full dark:bg-[#1e1f22]">
+    <div className="space-y-4 flex flex-col items-center h-full text-primary w-full dark:bg-[#1e1f22] bg-[#E3E5E*]">
       <NavigationAction />
       <Separator
         className="h-[2px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-10 mx-auto" 

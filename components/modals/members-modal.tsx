@@ -60,7 +60,7 @@ export const MembersModal = ()=> {
 
       router.refresh()
       onOpen('members',{ server:response.data})
-      
+
     }catch(error){
       console.log(error);
     
@@ -173,7 +173,8 @@ export const MembersModal = ()=> {
                           </DropdownMenuPortal>
                         </DropdownMenuSub>
                         <DropdownMenuSeparator>
-                          <DropdownMenuItem>
+                          <DropdownMenuItem
+                          onClick={()=>onKick(member.id)}>
                             <Gavel
                               className="h-4 w-4 mr-2"/>
                             Kick  
